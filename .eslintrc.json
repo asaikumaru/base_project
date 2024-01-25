@@ -1,21 +1,13 @@
-module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh','jsx-a11y', 'simple-import-sort', 'prettier'],
-  rules: {
+{
+  "extends": ["react-app", "standard", "standard-react"],
+  "plugins": ["jsx-a11y", "simple-import-sort", "prettier"],
+  "rules": {
     "react/no-unused-prop-types": "off",
     "react/prop-types": 0,
-    camelcase: "off",
-    indent: "off",
+    "camelcase": "off",
+    "indent": "off",
     "no-console": "off",
-    quotes: ["error", "single"],
+    "quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],
     "no-unused-vars": "off",
     "prefer-const": "error",
@@ -25,12 +17,12 @@ module.exports = {
     "comma-dangle": [
       "error",
       {
-        arrays: "always-multiline",
-        objects: "always-multiline",
-        imports: "always-multiline",
-        exports: "always-multiline",
-        functions: "always-multiline",
-      },
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
     ],
     "no-undef": "off",
     "react/react-in-jsx-scope": "off",
@@ -38,7 +30,7 @@ module.exports = {
     "simple-import-sort/imports": [
       "error",
       {
-        groups: [
+        "groups": [
           ["reflect-metadata"],
           [
             // Libs
@@ -59,21 +51,22 @@ module.exports = {
             "^\\./.*",
             // Style imports
             "^.*/styles",
-            "^\\./.+\\.css",
-            "^\\./.+\\.less",
+            // JavaScript files
+            "^\\./.+\\.jsx?$",
+            "^\\./.+\\.tsx?$",
             // Other
-            "^.*\\./.*",
-          ],
-        ],
-      },
+            "^.*\\./.*"
+          ]
+        ]
+      }
     ],
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
-        ignoreRestSiblings: true,
-      },
-    ],
-  },
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
 }

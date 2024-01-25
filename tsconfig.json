@@ -19,7 +19,6 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["@testing-library/jest-dom"]
   },
   "include": ["src", "src/core/theme/theme.ts", "declarations.d.ts", "config/jest/setupTests.js"],
   "exclude": ["adserve_script"],
